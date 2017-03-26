@@ -9,8 +9,7 @@
 									 @keyup.enter="fireApiRequest"
 									 class="input"
 									 type="text"
-									 placeholder="Enter subreddit">
-					</p>
+									 placeholder="Enter subreddit"></p>
 				</div>
 			</div>
 		</div>
@@ -19,8 +18,15 @@
 			<div class="field-body">
 				<div class="field">
 					<div class="control">
-						<button @click="fireApiRequest" class="button is-primary">
+						<button @click="fireApiRequest" class="button is-primary" :class="{ 'is-disabled' : !subreddit }">
 							Request
+						</button>
+					</div>
+				</div>
+				<div class="field">
+					<div class="control">
+						<button @click="clearResultCards" class="button is-danger" :class="{ 'is-disabled' : !clearButtonIsActive }">
+							Clear
 						</button>
 					</div>
 				</div>
@@ -40,12 +46,16 @@
 				subreddit: '',
 				basicQuery: 'https://www.reddit.com/r/',
 				jsonData: [],
+				clearButtonIsActive: false,
 			};
 		},
 
 		methods: {
+
 			fireApiRequest() {
 				const builtQuery = `${this.basicQuery + this.subreddit}.json`;
+				this.clearButtonIsActive = true;
+
 				this.$http.get(builtQuery).then((response) => {
 					this.jsonData = response.body;
 					Event.$emit('retrievedData', this.jsonData);
@@ -53,12 +63,26 @@
 					this.jsonData = response;
 				});
 			},
+
+			clearResultCards() {
+				Event.$emit('clearResultCards');
+				this.clearButtonIsActive = false;
+			},
 		},
 	};
 </script>
 
 <style scoped lang="scss">
 	.container {
-		margin-top: 50px;
+		margin-top: 3.8rem;
+	}
+
+	.control,
+	.button {
+		width: 100%;
+	}
+
+	.control {
+		margin-top: .5rem;
 	}
 </style>

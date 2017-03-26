@@ -1,42 +1,12 @@
 <template>
-	<nav class="nav">
-		<div class="nav-left">
-			<a class="nav-item">
-				<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-			</a>
-		</div>
 
+	<nav class="nav">
 		<div class="nav-center">
 			<a class="nav-item">
-      <span class="icon">
-        <i class="fa fa-github"></i>
-      </span>
-			</a>
-			<a class="nav-item">
-      <span class="icon">
-        <i class="fa fa-twitter"></i>
-      </span>
+				<img src="../assets/logo.png" alt="Bulma logo">
 			</a>
 		</div>
 
-		<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-		<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-		<span class="nav-toggle">
-			<span></span>
-			<span></span>
-			<span></span>
-		</span>
-
-		<!-- This "nav-menu" is hidden on mobile -->
-		<!-- Add the modifier "is-active" to display it on mobile -->
-		<div class="nav-right nav-menu">
-			<router-link class="nav-item is-tab"
-									 :class="{'is-active' : isActiveRoute(item.route)}"
-									 v-for="item in navItems"
-									 :key="item.id"
-									 :to="item.route" exact>
-				{{ item.name }}
-			</router-link>
 		</div>
 	</nav>
 </template>
@@ -65,5 +35,12 @@
 </script>
 
 <style scoped lang="scss">
+	.nav {
+		min-height: 5rem;
+		padding-top: 4rem;
+	}
 
+	.nav-item img {
+		max-height: 2.7rem;
+	}
 </style>

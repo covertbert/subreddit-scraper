@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" class="container">
 		<page-header></page-header>
 		<router-view></router-view>
 	</div>
@@ -17,6 +17,8 @@
 </script>
 
 <style>
-	@import "assets/scss/app.scss";
+	.container {
+		padding: 0 2vw;
+	}
 </style>
 
