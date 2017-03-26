@@ -1,20 +1,26 @@
 <template>
 	<div class="container">
-		<div class="notification" v-for="post in jsonData">
-			<button class="delete"></button>
+		<result-card v-for="post in jsonData" :key="post.id">
 			{{ post.data.title }}
-		</div>
+		</result-card>
 	</div>
 </template>
 
 <script>
+	import ResultCard from './ResultCard';
+
 	export default {
 		name: 'DataOutput',
 
 		data() {
 			return {
 				jsonData: [],
+				tileIsShown: true,
 			};
+		},
+
+		components: {
+			ResultCard,
 		},
 
 		created() {
@@ -25,7 +31,8 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+	.container {
+		margin-top: 50px;
+	}
 </style>
