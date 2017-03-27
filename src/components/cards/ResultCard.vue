@@ -11,7 +11,7 @@
 		</header>
 		<div class="card-content">
 			<div class="content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+				<slot></slot>
 				<a @click="handleLink('user', postAuthor)">{{ postAuthor }}</a> <small class="upvote-counter">{{ postUpvotes }}</small>
 				<br>
 				<small>{{ formatDate(postTimestamp) }}</small>
@@ -86,14 +86,12 @@
 </script>
 
 <style scoped lang="scss">
-	@import "../../assets/scss/app.scss";
-
 	.card {
 		margin-bottom: 1.8rem;
 	}
 
 	.upvote-counter {
-		color: $red;
+		color: #ff3860;
 		font-weight: bold;
 	}
 </style>

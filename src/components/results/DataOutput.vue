@@ -15,6 +15,9 @@
 					:post-upvotes="post.data.ups"
 					:comments-url="post.data.permalink"
 					:post-timestamp="post.data.created">
+					<post-comments-data
+						:comments-url="post.data.permalink">
+					</post-comments-data>
 				</result-card>
 			</single-tab>
 
@@ -32,10 +35,11 @@
 
 <script>
 	import _ from 'lodash';
-	import ResultCard from './ResultCard';
+	import ResultCard from '../cards/ResultCard';
 	import OrderBy from './OrderBy';
 	import TabsContainer from './../tabs/TabsContainer';
 	import SingleTab from './../tabs/SingleTab';
+	import PostCommentsData from './../cards/PostCommentsData';
 
 	export default {
 		name: 'DataOutput',
@@ -52,6 +56,7 @@
 			OrderBy,
 			TabsContainer,
 			SingleTab,
+			PostCommentsData,
 		},
 
 		computed: {
