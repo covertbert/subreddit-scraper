@@ -73,7 +73,7 @@
 
 <style scoped lang="scss">
 	.container {
-		margin-top: 3.6rem;
+		margin-top: 1.8rem;
 	}
 
 	.input {
