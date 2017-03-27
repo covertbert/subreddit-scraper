@@ -14,6 +14,7 @@
 <script>
 	export default {
 		name: 'PageHeader',
+
 		data() {
 			return {
 				navItems: [
@@ -22,6 +23,7 @@
 				],
 			};
 		},
+
 		methods: {
 			isActiveRoute(route) {
 				let routeStatus;
@@ -31,7 +33,9 @@
 				return routeStatus;
 			},
 		},
+
 	};
+
 </script>
 
 <style scoped lang="scss">

@@ -36,10 +36,6 @@
 	export default {
 		name: 'RequestForm',
 
-		components: {
-			FormButton,
-		},
-
 		data() {
 			return {
 				subreddit: '',
@@ -47,6 +43,10 @@
 				jsonData: [],
 				clearButtonIsActive: false,
 			};
+		},
+
+		components: {
+			FormButton,
 		},
 
 		methods: {
