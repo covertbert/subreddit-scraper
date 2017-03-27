@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import PageHeader from './components/PageHeader';
+	import PageHeader from './components/layout/PageHeader';
 
 	export default {
 		name: 'app',
@@ -17,8 +17,10 @@
 </script>
 
 <style>
-	.container {
-		padding: 0 2vw;
+	@media (max-width: 1000px) {
+		.container {
+			padding: 0 2vw;
+		}
 	}
 </style>
 

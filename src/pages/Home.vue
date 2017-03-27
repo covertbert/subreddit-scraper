@@ -6,8 +6,8 @@
 </template>
 
 <script>
-	import RequestForm from '../components/RequestForm';
-	import DataOutput from '../components/DataOutput';
+	import RequestForm from '../components/form/RequestForm';
+	import DataOutput from '../components/results/DataOutput';
 
 	export default {
 		name: 'home',

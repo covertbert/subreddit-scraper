@@ -83,7 +83,7 @@
 </script>
 
 <style scoped lang="scss">
-	@import "../assets/scss/app.scss";
+	@import "../../assets/scss/app.scss";
 
 	figure {
 		cursor: pointer;

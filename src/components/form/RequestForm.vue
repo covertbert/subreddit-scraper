@@ -16,20 +16,13 @@
 
 		<div class="field is-horizontal">
 			<div class="field-body">
-				<div class="field">
-					<div class="control">
-						<button @click="fireApiRequest" class="button is-primary" :class="{ 'is-disabled' : !subreddit }">
-							Request
-						</button>
-					</div>
-				</div>
-				<div class="field">
-					<div class="control">
-						<button @click="clearResultCards" class="button is-danger" :class="{ 'is-disabled' : !clearButtonIsActive }">
-							Clear
-						</button>
-					</div>
-				</div>
+				<form-button :click-event="fireApiRequest"
+										 :modifier="'is-primary'"
+										 :is-disabled-conditions="!subreddit">Request</form-button>
+
+				<form-button :click-event="clearResultCards"
+										 :modifier="'is-danger'"
+										 :is-disabled-conditions="!clearButtonIsActive">Clear</form-button>
 			</div>
 		</div>
 
@@ -38,8 +31,14 @@
 </template>
 
 <script>
+	import FormButton from './FormButton';
+
 	export default {
 		name: 'RequestForm',
+
+		components: {
+			FormButton,
+		},
 
 		data() {
 			return {
@@ -74,15 +73,12 @@
 
 <style scoped lang="scss">
 	.container {
-		margin-top: 3.8rem;
+		margin-top: 1.8rem;
 	}
 
-	.control,
-	.button {
-		width: 100%;
-	}
-
-	.control {
-		margin-top: .5rem;
+	.input {
+		height: 90px;
+		text-align: center;
+		font-size: 2.5rem;
 	}
 </style>

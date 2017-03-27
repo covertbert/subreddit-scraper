@@ -3,7 +3,7 @@
 	<nav class="nav">
 		<div class="nav-center">
 			<a class="nav-item">
-				<img src="../assets/logo.png" alt="Bulma logo">
+				<img src="../../assets/logo.png" alt="Bulma logo">
 			</a>
 		</div>
 
@@ -37,7 +37,7 @@
 <style scoped lang="scss">
 	.nav {
 		min-height: 5rem;
-		padding-top: 4rem;
+		padding-top: 2rem;
 	}
 
 	.nav-item img {
