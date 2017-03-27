@@ -4,16 +4,17 @@
 
 			<single-tab name="Overview" :selected="true">
 
-				<order-by></order-by>
+				<order-by v-show="2> 1"></order-by>
 
 				<result-card
 					v-for="post in jsonDataOrderByUps"
 					:key="post.id"
 					:post-title="post.data.title"
 					:post-author="post.data.author"
-					:post-thumbnail-url="determineThumbnail(post.data.thumbnail)"
 					:post-url="post.data.url"
-					:post-upvotes="post.data.ups">
+					:post-upvotes="post.data.ups"
+					:comments-url="post.data.permalink"
+					:post-timestamp="post.data.created">
 				</result-card>
 			</single-tab>
 
@@ -69,17 +70,6 @@
 		},
 
 		methods: {
-			determineThumbnail(thumbnailUrlSource) {
-				let thumbnailUrlOutput;
-				if (thumbnailUrlSource === 'self' || thumbnailUrlSource === '') {
-					thumbnailUrlOutput = 'https://repo.spydar007.com/packages/images/Reddit.png';
-				} else if (thumbnailUrlSource === 'nsfw' || thumbnailUrlSource === 'spoiler') {
-					thumbnailUrlOutput = 'http://i.imgur.com/UHzw6.png';
-				} else {
-					thumbnailUrlOutput = thumbnailUrlSource;
-				}
-				return thumbnailUrlOutput;
-			},
 		},
 	};
 </script>

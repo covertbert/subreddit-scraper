@@ -1,42 +1,33 @@
 <template>
 
-	<article v-if="resultsCardIsShown" class="media">
-		<figure @click="handleLink(false, postUrl)" class="media-left">
-			<p class="image is-64x64">
-				<img :src="postThumbnailUrl">
-			</p>
-		</figure>
-		<div class="media-content">
+	<div v-if="resultsCardIsShown" class="card">
+		<header class="card-header">
+			<p class="card-header-title">{{ postTitle }}</p>
+			<a class="card-header-icon">
+      <span class="icon">
+        <i class="fa fa-angle-down"></i>
+      </span>
+			</a>
+		</header>
+		<div class="card-content">
 			<div class="content">
-				<p>
-					<strong>{{ postAuthor }}</strong>
-					<small><a @click="handleLink(true, postAuthor)">/u/{{ postAuthor }}</a></small>
-					<small class="upvote-counter">{{ postUpvotes }}</small>
-					<br>
-				<div class="content">{{ postTitle }}</div>
-				</p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+				<a @click="handleLink('user', postAuthor)">{{ postAuthor }}</a> <small class="upvote-counter">{{ postUpvotes }}</small>
+				<br>
+				<small>{{ formatDate(postTimestamp) }}</small>
 			</div>
-			<nav class="level is-mobile">
-				<div class="level-left">
-					<a class="level-item">
-						<span class="icon is-small"><i class="fa fa-reply"></i></span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fa fa-retweet"></i></span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fa fa-heart"></i></span>
-					</a>
-				</div>
-			</nav>
 		</div>
-		<div class="media-right">
-			<button @click="resultsCardIsShown = false" class="delete"></button>
-		</div>
-	</article>
+		<footer class="card-footer">
+			<a @click="handleLink('post', postUrl)" class="card-footer-item">View Link</a>
+			<a @click="handleLink('comments', commentsUrl)" class="card-footer-item">View Comments</a>
+			<a @click="resultsCardIsShown = false" class="card-footer-item">Delete</a>
+		</footer>
+	</div>
 </template>
 
 <script>
+	import moment from 'moment';
+
 	export default {
 		name: 'ResultCard',
 
@@ -49,15 +40,19 @@
 				type: String,
 				required: true,
 			},
-			postThumbnailUrl: {
-				type: String,
-				required: true,
-			},
 			postUrl: {
 				type: String,
 				required: true,
 			},
+			commentsUrl: {
+				type: String,
+				required: true,
+			},
 			postUpvotes: {
+				type: Number,
+				required: true,
+			},
+			postTimestamp: {
 				type: Number,
 				required: true,
 			},
@@ -70,12 +65,20 @@
 		},
 
 		methods: {
-			handleLink(isUser, redditSection) {
-				if (isUser === true) {
+			handleLink(type, redditSection) {
+				if (type === 'user') {
 					window.open(`http://reddit.com/u/${redditSection}`, '_blank');
-				} else {
+				}
+				if (type === 'comments') {
+					window.open(`http://reddit.com/${redditSection}`, '_blank');
+				}
+				if (type === 'post') {
 					window.open(redditSection, '_blank');
 				}
+			},
+
+			formatDate(postTimestamp) {
+				return moment.unix(postTimestamp).format('ll');
 			},
 		},
 
@@ -85,9 +88,10 @@
 <style scoped lang="scss">
 	@import "../../assets/scss/app.scss";
 
-	figure {
-		cursor: pointer;
+	.card {
+		margin-bottom: 1.8rem;
 	}
+
 	.upvote-counter {
 		color: $red;
 		font-weight: bold;
