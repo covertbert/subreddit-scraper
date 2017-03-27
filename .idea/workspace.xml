@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32a06fe-cd9d-48cd-bb6f-e3740349c750" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/DataOutput.vue" afterPath="$PROJECT_DIR$/src/components/results/DataOutput.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/PageHeader.vue" afterPath="$PROJECT_DIR$/src/components/layout/PageHeader.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/RequestForm.vue" afterPath="$PROJECT_DIR$/src/components/form/RequestForm.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/ResultCard.vue" afterPath="$PROJECT_DIR$/src/components/results/ResultCard.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/eslintPlugin.xml" afterPath="$PROJECT_DIR$/.idea/eslintPlugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Home.vue" afterPath="$PROJECT_DIR$/src/pages/Home.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RequestForm.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/form/RequestForm.vue">
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+            <state relative-caret-position="572">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -58,6 +52,7 @@
       <find>thum</find>
       <find>console</find>
       <find>resolve</find>
+      <find>2vw</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/node_modules/bulma</dir>
@@ -76,7 +71,6 @@
         <option value="$PROJECT_DIR$/src/components/HamburgerButton.vue" />
         <option value="$PROJECT_DIR$/src/pages/Results.vue" />
         <option value="$PROJECT_DIR$/.eslintrc" />
-        <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/assets/scss/app.scss" />
         <option value="$PROJECT_DIR$/src/components/ResultCard.vue" />
         <option value="$PROJECT_DIR$/src/pages/Home.vue" />
@@ -89,6 +83,7 @@
         <option value="$PROJECT_DIR$/src/components/FormButton.vue" />
         <option value="$PROJECT_DIR$/src/components/layout/PageHeader.vue" />
         <option value="$PROJECT_DIR$/src/components/form/RequestForm.vue" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
       </list>
     </option>
   </component>
@@ -102,6 +97,9 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -145,6 +143,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,12 +274,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.eslint.settings.ESLintSettingsPage" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -382,7 +380,8 @@
       <option name="presentableId" value="Default" />
       <updated>1490550191488</updated>
       <workItem from="1490550195514" duration="17732000" />
-      <workItem from="1490603865163" duration="5644000" />
+      <workItem from="1490603865163" duration="5821000" />
+      <workItem from="1490629841907" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="Removed superfluous boilerplate comments and stuff">
       <created>1490558568868</created>
@@ -391,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490558568868</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tidied components directory, turned form buttons into components and started select box filter">
+      <created>1490629685839</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1490629685839</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23376000" />
+    <option name="totallyTimeSpent" value="24045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,6 +420,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -426,7 +433,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -439,13 +445,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed superfluous boilerplate comments and stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed superfluous boilerplate comments and stuff" />
+    <MESSAGE value="Tidied components directory, turned form buttons into components and started select box filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidied components directory, turned form buttons into components and started select box filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <marker date="1490603858000" expanded="true" signature="0:139" ph="//..." />
+            <marker date="1490603858000" expanded="true" signature="147:218" ph="..." />
+            <marker date="1490603858000" expanded="true" signature="372:399" ph="/*...*/" />
+            <marker date="1490603858000" expanded="true" signature="435:503" ph="{&quot;el&quot;: '##app'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/results/DataOutput.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1118">
@@ -525,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,21 +563,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
@@ -571,38 +575,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
           <caret line="63" column="6" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="63" selection-end-column="6" />
-          <folding>
-            <marker date="1490629408000" expanded="true" signature="9:1083" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="61:1071" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="127:211" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="157:199" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="241:950" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="266:535" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="274:474" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="568:941" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="597:931" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="625:704" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="732:813" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="841:920" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="978:1059" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="1093:1759" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="1111:1749" ph="{&quot;name&quot;: 'ResultCard'...}" />
-            <marker date="1490629408000" expanded="true" signature="1145:1458" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1161:1205" ph="{&quot;type&quot;: String...}" />
-            <marker date="1490629408000" expanded="true" signature="1222:1266" ph="{&quot;type&quot;: String...}" />
-            <marker date="1490629408000" expanded="true" signature="1289:1333" ph="{&quot;type&quot;: String...}" />
-            <marker date="1490629408000" expanded="true" signature="1347:1391" ph="{&quot;type&quot;: String...}" />
-            <marker date="1490629408000" expanded="true" signature="1409:1453" ph="{&quot;type&quot;: Number...}" />
-            <marker date="1490629408000" expanded="true" signature="1470:1523" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1482:1518" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1537:1744" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1576:1739" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1603:1678" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1684:1734" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1787:1926" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="1837:1860" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="1878:1918" ph="{...}" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/FormButton.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layout/PageHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -610,25 +596,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/RequestForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
-            <marker date="1490625742000" expanded="true" signature="9:247" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="31:234" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="53:226" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="79:219" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="94:207" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="257:356" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="275:346" ph="{&quot;name&quot;: 'OrderBy'...}" />
-            <marker date="1490625742000" expanded="true" signature="306:325" ph="{...}" />
-            <marker date="1490625742000" expanded="true" signature="384:448" ph="..." />
-            <marker date="1490625742000" expanded="true" signature="411:440" ph="{...}" />
+            <marker date="1490603858000" expanded="true" signature="0:139" ph="//..." />
+            <marker date="1490603858000" expanded="true" signature="147:218" ph="..." />
+            <marker date="1490603858000" expanded="true" signature="372:399" ph="/*...*/" />
+            <marker date="1490603858000" expanded="true" signature="435:503" ph="{&quot;el&quot;: '##app'...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/results/DataOutput.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="442">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <marker date="1490625645000" expanded="true" signature="9:362" ph="..." />
             <marker date="1490625645000" expanded="true" signature="34:350" ph="..." />
@@ -655,78 +656,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/FormButton.vue">
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <marker date="1490629291000" expanded="true" signature="9:226" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="30:214" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="54:206" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="166:197" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="236:712" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="254:702" ph="{&quot;name&quot;: 'FormButton'...}" />
-            <marker date="1490629291000" expanded="true" signature="288:487" ph="{...}" />
-            <marker date="1490629291000" expanded="true" signature="305:351" ph="{&quot;type&quot;: Function...}" />
-            <marker date="1490629291000" expanded="true" signature="366:410" ph="{&quot;type&quot;: String...}" />
-            <marker date="1490629291000" expanded="true" signature="437:482" ph="{&quot;type&quot;: Boolean...}" />
-            <marker date="1490629291000" expanded="true" signature="501:697" ph="{...}" />
-            <marker date="1490629291000" expanded="true" signature="562:692" ph="{...}" />
-            <marker date="1490629291000" expanded="true" signature="740:876" ph="..." />
-            <marker date="1490629291000" expanded="true" signature="761:780" ph="{...}" />
-            <marker date="1490629291000" expanded="true" signature="792:817" ph="{...}" />
-            <marker date="1490629291000" expanded="true" signature="827:868" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <marker date="1490629408000" expanded="true" signature="9:116" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="34:104" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="126:419" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="136:246" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="264:409" ph="{&quot;name&quot;: 'home'...}" />
-            <marker date="1490629408000" expanded="true" signature="291:353" ph="{...}" />
-            <marker date="1490629408000" expanded="true" signature="303:348" ph="{&quot;msg&quot;: 'Welcome to Your Vue.js App'...}" />
-            <marker date="1490629408000" expanded="true" signature="369:405" ph="{&quot;RequestForm&quot;: RequestForm...}" />
-            <marker date="1490629408000" expanded="true" signature="447:493" ph="..." />
-            <marker date="1490629408000" expanded="true" signature="456:485" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layout/PageHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <marker date="1490629542000" expanded="true" signature="9:182" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="29:170" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="56:152" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="80:143" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="192:547" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="210:537" ph="{&quot;name&quot;: 'PageHeader'...}" />
-            <marker date="1490629542000" expanded="true" signature="243:369" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="255:364" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="271:358" ph="[...]" />
-            <marker date="1490629542000" expanded="true" signature="382:533" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="408:528" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="467:499" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="575:679" ph="..." />
-            <marker date="1490629542000" expanded="true" signature="583:628" ph="{...}" />
-            <marker date="1490629542000" expanded="true" signature="645:671" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/RequestForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+        <state relative-caret-position="572">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
