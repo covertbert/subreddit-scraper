@@ -3,7 +3,7 @@
   <component name="ESLintProjectComponent">
     <option name="eslintRcFile" value="$PROJECT_DIR$/.eslintrc" />
     <option name="eslintExecutable" value="/usr/local/bin/eslint" />
-    <option name="nodeInterpreter" value="/usr/local/Cellar/node/7.7.2/bin/node" />
+    <option name="nodeInterpreter" value="/usr/local/Cellar/node/7.0.0/bin/node" />
     <option name="pluginEnabled" value="true" />
   </component>
 </project>

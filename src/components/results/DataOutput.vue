@@ -1,5 +1,6 @@
 <template>
 	<div class="container">
+		<order-by></order-by>
 		<result-card
 			v-for="post in jsonDataOrderByUps"
 			:key="post.id"
@@ -15,6 +16,7 @@
 <script>
 	import _ from 'lodash';
 	import ResultCard from './ResultCard';
+	import OrderBy from './OrderBy';
 
 	export default {
 		name: 'DataOutput',
@@ -28,6 +30,7 @@
 
 		components: {
 			ResultCard,
+			OrderBy,
 		},
 
 		computed: {
@@ -63,6 +66,6 @@
 
 <style scoped lang="scss">
 	.container {
-		margin-top: 50px;
+		margin-top: 20px;
 	}
 </style>
