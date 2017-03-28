@@ -4,19 +4,19 @@
 
 			<single-tab name="Overview" :selected="true">
 
-				<order-by v-show="2> 1"></order-by>
+				<order-by v-show="2 > 1"></order-by>
 
 				<result-card
-					v-for="post in jsonDataOrderByUps"
-					:key="post.id"
-					:post-title="post.data.title"
-					:post-author="post.data.author"
-					:post-url="post.data.url"
-					:post-upvotes="post.data.ups"
-					:comments-url="post.data.permalink"
-					:post-timestamp="post.data.created">
+					v-for="post in jsonData"
+					:key="post.name"
+					:post-title="post.title"
+					:post-author="post.author.name"
+					:post-url="post.url"
+					:post-upvotes="post.ups"
+					:comments-url="post.permalink"
+					:post-timestamp="post.created">
 					<post-comments-data
-						:comments-url="post.data.permalink">
+						:comments-url="post.permalink">
 					</post-comments-data>
 				</result-card>
 			</single-tab>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-	import _ from 'lodash';
+//	import _ from 'lodash';
 	import ResultCard from '../cards/ResultCard';
 	import OrderBy from './OrderBy';
 	import TabsContainer from './../tabs/TabsContainer';
@@ -60,14 +60,14 @@
 		},
 
 		computed: {
-			jsonDataOrderByUps() {
-				return _.orderBy(this.jsonData, ['data.ups'], ['desc']);
-			},
+//			jsonDataOrderByUps() {
+//				return _.orderBy(this.jsonData, ['data.ups'], ['desc']);
+//			},
 		},
 
 		created() {
 			Event.$on('retrievedData', (jsonData) => {
-				this.jsonData = jsonData.data.children;
+				this.jsonData = jsonData;
 			});
 			Event.$on('clearResultCards', () => {
 				this.jsonData = [];

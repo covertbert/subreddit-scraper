@@ -3,7 +3,7 @@
 </template>
 
 <script>
-	import _ from 'lodash';
+	import Reddit from '../main'
 
 	export default {
 		name: 'PostCommentsData',
@@ -11,7 +11,7 @@
 		extends: {},
 
 		props: {
-			commentsUrl: {
+			currentPostId: {
 				type: String,
 				required: true,
 			},
@@ -31,30 +31,8 @@
 		watch: {},
 
 		methods: {
-			fireApiRequest(commentsUrl) {
-				const builtString = `http://www.reddit.com/${this.stripTrailingSlash(commentsUrl)}.json`;
-				this.$http.get(builtString).then((response) => {
-					this.jsonData = response.body;
-					this.countChildren(response);
-				}, (response) => {
-					this.jsonData = response;
-				});
-			},
-
-			stripTrailingSlash(str) {
-				if (str.endsWith('/')) {
-					return str.slice(0, -1);
-				}
-				return str;
-			},
-
-			countChildren(postData) {
-				const postChildren = postData.body[1].data.children;
-
-				// TODO fix this filter so it returns number or children recursively
-				let numberOfChildren = _.filter(postChildren, { submodules: [ { id: 2 } ]});
-
-				this.numberOfChildren = numberOfChildren;
+			fireApiRequest() {
+				Reddit.getSubmission('4j8p6d').expandReplies({ limit: Infinity, depth: Infinity }).then(console.log);
 			},
 		},
 
@@ -63,7 +41,7 @@
 		},
 
 		mounted() {
-			this.fireApiRequest(this.commentsUrl);
+			this.fireApiRequest(this.currentPostId);
 		},
 
 	};

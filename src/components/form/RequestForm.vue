@@ -18,11 +18,13 @@
 			<div class="field-body">
 				<form-button :click-event="fireApiRequest"
 										 :modifier="'is-primary'"
-										 :is-disabled-conditions="!subreddit">Request</form-button>
+										 :is-disabled-conditions="!subreddit">Request
+				</form-button>
 
 				<form-button :click-event="clearResultCards"
 										 :modifier="'is-danger'"
-										 :is-disabled-conditions="!clearButtonIsActive">Clear</form-button>
+										 :is-disabled-conditions="!clearButtonIsActive">Clear
+				</form-button>
 			</div>
 		</div>
 
@@ -32,6 +34,7 @@
 
 <script>
 	import FormButton from './FormButton';
+	import Reddit from '../main'
 
 	export default {
 		name: 'RequestForm',
@@ -52,15 +55,11 @@
 		methods: {
 
 			fireApiRequest() {
-				const builtQuery = `${this.basicQuery + this.subreddit}.json`;
-				this.clearButtonIsActive = true;
-
-				this.$http.get(builtQuery).then((response) => {
-					this.jsonData = response.body;
-					Event.$emit('retrievedData', this.jsonData);
-				}, (response) => {
-					this.jsonData = response;
+				Reddit.getSubreddit(this.subreddit).getHot({ limit: 20 }).forEach((postItem) => {
+					this.jsonData.push(postItem);
 				});
+				Event.$emit('retrievedData', this.jsonData);
+				this.clearButtonIsActive = true;
 			},
 
 			clearResultCards() {
