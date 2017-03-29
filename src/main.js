@@ -14,6 +14,7 @@ const Reddit = new SnooWrap({
 	userAgent: 'R-Scraper v0.1',
 	clientId: '16Ocd8x9UuG3gg',
 	clientSecret: 'xjBuw6b6hMUMXa7Jy3W6Tk-pMfg',
+	// refreshToken: 'lHv6GYnduhk1wyw7i1ceJAkndBo',
 	username: 'rScraperoo',
 	password: 'Pa55word',
 });

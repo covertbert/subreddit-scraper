@@ -55,7 +55,8 @@
 		methods: {
 
 			fireApiRequest() {
-				Reddit.getSubreddit(this.subreddit).getHot({ limit: 20 }).forEach((postItem) => {
+				this.jsonData = [];
+				Reddit.getSubreddit(this.subreddit).getHot({ limit: 1 }).forEach((postItem) => {
 					this.jsonData.push(postItem);
 				});
 				Event.$emit('retrievedData', this.jsonData);

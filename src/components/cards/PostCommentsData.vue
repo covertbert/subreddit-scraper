@@ -11,7 +11,7 @@
 		extends: {},
 
 		props: {
-			currentPostId: {
+			postId: {
 				type: String,
 				required: true,
 			},
@@ -31,8 +31,13 @@
 		watch: {},
 
 		methods: {
-			fireApiRequest() {
-				Reddit.getSubmission('4j8p6d').expandReplies({ limit: Infinity, depth: Infinity }).then(console.log);
+			fireApiRequest(currentPostId) {
+				Reddit.getSubmission(currentPostId).expandReplies({
+					limit: Infinity,
+					depth: Infinity,
+				}).then((data) => {
+					this.numberOfChildren = data.comments.length;
+				});
 			},
 		},
 
@@ -41,7 +46,7 @@
 		},
 
 		mounted() {
-			this.fireApiRequest(this.currentPostId);
+			this.fireApiRequest(this.postId);
 		},
 
 	};

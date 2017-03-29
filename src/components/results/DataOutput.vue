@@ -6,8 +6,7 @@
 
 				<order-by v-show="2 > 1"></order-by>
 
-				<result-card
-					v-for="post in jsonData"
+				<result-card v-for="post in jsonData"
 					:key="post.name"
 					:post-title="post.title"
 					:post-author="post.author.name"
@@ -16,6 +15,7 @@
 					:comments-url="post.permalink"
 					:post-timestamp="post.created">
 					<post-comments-data
+						:post-id="post.id"
 						:comments-url="post.permalink">
 					</post-comments-data>
 				</result-card>
