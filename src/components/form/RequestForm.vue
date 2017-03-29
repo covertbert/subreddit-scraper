@@ -34,7 +34,7 @@
 
 <script>
 	import FormButton from './FormButton';
-	import Reddit from '../../main';
+	import Reddit from '../../config/reddit';
 
 	export default {
 		name: 'RequestForm',

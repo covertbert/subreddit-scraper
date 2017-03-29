@@ -1,9 +1,16 @@
 <template>
-	<p>{{ numberOfChildren }}</p>
+	<table class="table">
+		<tbody>
+		<tr>
+			<th>Number of children</th>
+			<td>{{ numberOfChildren }}</td>
+		</tr>
+		</tbody>
+	</table>
 </template>
 
 <script>
-	import Reddit from '../../main';
+	import Reddit from '../../config/reddit';
 
 	export default {
 		name: 'PostCommentsData',
