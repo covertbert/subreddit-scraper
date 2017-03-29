@@ -3,7 +3,7 @@
 </template>
 
 <script>
-	import Reddit from '../main'
+	import Reddit from '../../main';
 
 	export default {
 		name: 'PostCommentsData',

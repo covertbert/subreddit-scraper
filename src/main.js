@@ -6,7 +6,6 @@ import router from './router';
 
 const VueResource = require('vue-resource');
 const Bulma = require('bulma');
-
 const SnooWrap = require('snoowrap');
 
 const Reddit = new SnooWrap({
@@ -23,10 +22,12 @@ Vue.use(VueResource);
 Vue.use(Bulma);
 
 Vue.config.productionTip = false;
-
+export default Reddit;
 /* eslint-disable no-new */
+// Global event handler for sharing events between components
 window.Event = new Vue();
 
+// Main Vue
 new Vue({
 	el: '#app',
 	router,
