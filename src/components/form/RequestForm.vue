@@ -9,7 +9,8 @@
 									 @keyup.enter="fireApiRequest"
 									 class="input"
 									 type="text"
-									 placeholder="Enter subreddit"></p>
+									 placeholder="Enter subreddit">
+					</p>
 				</div>
 			</div>
 		</div>
@@ -56,7 +57,7 @@
 
 			fireApiRequest() {
 				this.jsonData = [];
-				Reddit.getSubreddit(this.subreddit).getHot({ limit: 1 }).forEach((postItem) => {
+				Reddit.getSubreddit(this.subreddit).getHot({ limit: 10 }).forEach((postItem) => {
 					this.jsonData.push(postItem);
 				});
 				Event.$emit('retrievedData', this.jsonData);
@@ -66,6 +67,7 @@
 			clearResultCards() {
 				Event.$emit('clearResultCards');
 				this.clearButtonIsActive = false;
+				this.subreddit = '';
 			},
 		},
 	};

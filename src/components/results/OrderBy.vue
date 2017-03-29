@@ -2,13 +2,13 @@
 
 	<div class="field">
 		<p class="control">
-    <span class="select">
-      <select>
-        <option>Order by</option>
-        <option>None</option>
-        <option>Upvotes</option>
-      </select>
-    </span>
+			<span class="select">
+				<select v-model="selected">
+					<option>None</option>
+					<option value="upvotes">Upvotes</option>
+				</select>
+    	</span>
+			<button @click="orderBy" class="button is-info">Reorder</button>
 		</p>
 	</div>
 
@@ -19,10 +19,15 @@
 		name: 'OrderBy',
 
 		data() {
-			return {};
+			return {
+				selected: '',
+			};
 		},
-
-		methods: {},
+		methods: {
+			orderBy() {
+				Event.$emit('reorderData', this.selected);
+			},
+		},
 
 	};
 </script>

@@ -17,6 +17,9 @@
 </script>
 
 <style>
+	#app {
+		width: 100%;
+	}
 	@media (max-width: 999px) {
 		.container {
 			padding: 0 2vw;

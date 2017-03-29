@@ -7,16 +7,15 @@
 				<order-by v-show="2 > 1"></order-by>
 
 				<result-card v-for="post in jsonData"
-					:key="post.name"
-					:post-title="post.title"
-					:post-author="post.author.name"
-					:post-url="post.url"
-					:post-upvotes="post.ups"
-					:comments-url="post.permalink"
-					:post-timestamp="post.created">
+										 :key="post.name"
+										 :post-title="post.title"
+										 :post-url="post.url"
+										 :comments-url="post.permalink">
 					<post-comments-data
 						:post-id="post.id"
-						:comments-url="post.permalink">
+						:post-upvotes="post.ups"
+						:post-author="post.author.name"
+						:post-timestamp="post.created">
 					</post-comments-data>
 				</result-card>
 			</single-tab>
@@ -34,7 +33,7 @@
 </template>
 
 <script>
-//	import _ from 'lodash';
+	import _ from 'lodash';
 	import ResultCard from '../cards/ResultCard';
 	import OrderBy from './OrderBy';
 	import TabsContainer from './../tabs/TabsContainer';
@@ -59,23 +58,26 @@
 			PostCommentsData,
 		},
 
-		computed: {
-//			jsonDataOrderByUps() {
-//				return _.orderBy(this.jsonData, ['data.ups'], ['desc']);
-//			},
-		},
+		computed: {},
 
 		created() {
 			Event.$on('retrievedData', (jsonData) => {
 				this.jsonData = jsonData;
 			});
+
+			Event.$on('reorderData', (value) => {
+				if (value === 'upvotes') {
+					_.orderBy(this.jsonData, ['post.ups'], ['desc']);
+				}
+				Event.$emit('refireApiRequest');
+			});
+
 			Event.$on('clearResultCards', () => {
 				this.jsonData = [];
 			});
 		},
 
-		methods: {
-		},
+		methods: {},
 	};
 </script>
 
