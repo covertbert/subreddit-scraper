@@ -4,8 +4,6 @@
 
 			<single-tab name="Overview" :selected="true">
 
-				<order-by v-show="2 > 1"></order-by>
-
 				<result-card v-for="post in jsonData"
 										 :key="post.name"
 										 :post-title="post.title"
@@ -33,9 +31,7 @@
 </template>
 
 <script>
-	import _ from 'lodash';
 	import ResultCard from '../cards/ResultCard';
-	import OrderBy from './OrderBy';
 	import TabsContainer from './../tabs/TabsContainer';
 	import SingleTab from './../tabs/SingleTab';
 	import PostCommentsData from './../cards/PostCommentsData';
@@ -52,7 +48,6 @@
 
 		components: {
 			ResultCard,
-			OrderBy,
 			TabsContainer,
 			SingleTab,
 			PostCommentsData,
@@ -63,13 +58,6 @@
 		created() {
 			Event.$on('retrievedData', (jsonData) => {
 				this.jsonData = jsonData;
-			});
-
-			Event.$on('reorderData', (value) => {
-				if (value === 'upvotes') {
-					_.orderBy(this.jsonData, ['post.ups'], ['desc']);
-				}
-				Event.$emit('refireApiRequest');
 			});
 
 			Event.$on('clearResultCards', () => {

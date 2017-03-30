@@ -43,7 +43,6 @@
 		data() {
 			return {
 				subreddit: '',
-				basicQuery: 'https://www.reddit.com/r/',
 				jsonData: [],
 				clearButtonIsActive: false,
 			};
