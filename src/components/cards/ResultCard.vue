@@ -1,5 +1,5 @@
 <template>
-	<div v-if="resultsCardIsShown" class="card">
+	<div v-show="resultsCardIsShown" class="card">
 		<header class="card-header">
 			<p class="card-header-title">{{ postTitle }}</p>
 			<a class="card-header-icon">
