@@ -98,7 +98,7 @@
 	};
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="scss" rel="stylesheet/scss">
 	.content__container {
 		display: flex;
 		justify-content: center;
