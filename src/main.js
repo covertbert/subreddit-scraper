@@ -1,12 +1,14 @@
 import Vue from 'vue';
+import * as VueResource from 'vue-resource';
+import * as AppScss from './assets/scss/app.scss';
 import App from './App';
 import router from './router';
 
-const VueResource = require('vue-resource');
 const Bulma = require('bulma');
 
-Vue.use(VueResource);
 Vue.use(Bulma);
+Vue.use(VueResource);
+Vue.use(AppScss);
 
 Vue.config.productionTip = false;
 Vue.config.performance = true;
